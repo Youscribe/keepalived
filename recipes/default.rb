@@ -20,13 +20,13 @@
 package "keepalived"
 
 if node['keepalived']['shared_address']
-  file '/etc/sysctl.d/60-ip-nonlocal-bind.conf' do
-    mode 0644
-    content "net.ipv4.ip_nonlocal_bind=1\n"
+  sysctl 'keepalived' do
+    variable "net.ipv4.ip_nonlocal_bind"
+    value "1"
   end
-
-  service 'procps' do
-    action :start
+else
+  sysctl 'keepalived' do
+    action :remove
   end
 end
 

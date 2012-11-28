@@ -8,3 +8,5 @@ version           "1.0.0"
 supports          "ubuntu"
 
 recipe "keepalived", "Installs and configures keepalived"
+
+depends           "sysctl"
