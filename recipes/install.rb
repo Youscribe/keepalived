@@ -1,0 +1,1 @@
+include_recipe "keepalived::install_#{node["keepalived"]["install_method"]}"

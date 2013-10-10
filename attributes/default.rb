@@ -10,3 +10,5 @@ default['keepalived']['instance_defaults']['state'] = 'MASTER'
 default['keepalived']['instance_defaults']['priority'] = 100
 default['keepalived']['instance_defaults']['virtual_router_id'] = 10
 default['keepalived']['instances'] = {}
+default['keepalived']['install_method'] = 'package'
+default['keepalived']['version'] = '1.2.8'

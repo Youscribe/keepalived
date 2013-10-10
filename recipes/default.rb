@@ -17,7 +17,7 @@
 # limitations under the License.
 #
 
-package "keepalived"
+include_recipe "keepalived::install"
 
 if node['keepalived']['shared_address']
   sysctl 'keepalived' do

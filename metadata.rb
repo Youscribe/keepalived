@@ -10,3 +10,6 @@ supports          "ubuntu"
 recipe "keepalived", "Installs and configures keepalived"
 
 depends           "sysctl"
+depends           "apt"
+depends           "ark"
+depends           "build-essential"
